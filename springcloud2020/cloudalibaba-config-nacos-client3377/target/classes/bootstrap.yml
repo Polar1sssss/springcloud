@@ -1,0 +1,15 @@
+server:
+  port: 3377
+spring:
+  application:
+    name: nacos-config-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848   #该模块也是个微服务，也需要注册到注册中心，需要指定注册中心地址
+      config:
+        server-addr: localhost:8848   #指定配置中心的地址
+        file-extension: yaml          #指定yaml格式的配置
+        #group: DEV-GROUP
+        namespace: a6e85549-d68c-4f12-bb66-26435a2932b5
+
